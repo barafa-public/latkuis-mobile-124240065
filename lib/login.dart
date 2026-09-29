@@ -57,7 +57,7 @@ class _LoginPageState extends State<LoginPage> {
     }
   }
 
-  // Field berbentuk pil, warna border mengikuti tema (abu keunguan)
+  // Decoration
   InputDecoration _fieldDecoration(String hint) {
     final outline = Theme.of(context).colorScheme.outline;
 
@@ -85,7 +85,7 @@ class _LoginPageState extends State<LoginPage> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                // Logo: selebar layar, rasio 1:1
+                // Logo
                 Image.asset(
                   'lib/assets/images/LogoMieGacoan.png',
                   width: double.infinity,
@@ -125,7 +125,7 @@ class _LoginPageState extends State<LoginPage> {
                 ],
                 const SizedBox(height: 16),
 
-                // Tombol login (pil biru di tengah)
+                // Tombol login
                 SizedBox(
                   width: 175,
                   height: 40,
