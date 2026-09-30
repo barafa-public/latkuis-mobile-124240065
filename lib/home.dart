@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'detail.dart';
 import 'models/data.dart';
 
 class HomePage extends StatelessWidget {
@@ -21,7 +22,6 @@ class HomePage extends StatelessWidget {
 
           return ListTile(
             contentPadding: const EdgeInsets.symmetric(horizontal: 12),
-            // Ukuran gambar dikunci 48x48 + BoxFit.cover,
             leading: ClipRRect(
               borderRadius: BorderRadius.circular(4),
               child: Image.asset(
@@ -37,6 +37,12 @@ class HomePage extends StatelessWidget {
               style: const TextStyle(fontSize: 12),
             ),
             trailing: const Icon(Icons.chevron_right, size: 28),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => DetailPage(menu: menu)),
+              );
+            },
           );
         },
       ),
